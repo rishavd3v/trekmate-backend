@@ -11,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/api',verifyOrigin, trekRoute)
 
+app.get('/',(req,res)=>{
+    res.send('Hello from server');
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })
