@@ -9,7 +9,7 @@ const port  = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use('/api',verifyOrigin, trekRoute)
+app.use('/api', trekRoute)
 
 app.get('/',(req,res)=>{
     res.send('Hello from server');
